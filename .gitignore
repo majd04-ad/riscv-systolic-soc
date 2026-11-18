@@ -1,0 +1,26 @@
+# Build outputs
+build/
+obj_dir/
+*.vcd
+*.fst
+*.log
+# Vivado / Quartus
+*.jou
+*.str
+.Xil/
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+db/
+incremental_db/
+output_files/
+# Software
+*.o
+*.elf
+*.bin
+*.vmem
+*.map
+# Python
+__pycache__/
+.venv/
