@@ -1,0 +1,20 @@
+name: sw tests
+
+on:
+  push:
+    paths: ["sw/**", ".github/workflows/sw-tests.yml"]
+  pull_request:
+    paths: ["sw/**", ".github/workflows/sw-tests.yml"]
+
+jobs:
+  host:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        accel_dim: [4, 8]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tests
+        run: make -C sw test ACCEL_DIM=${{ matrix.accel_dim }}
+      - name: Tests with sanitizers
+        run: make -C sw test-sanitize ACCEL_DIM=${{ matrix.accel_dim }}
