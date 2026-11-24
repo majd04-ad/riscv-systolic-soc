@@ -28,7 +28,7 @@ $(BUILD)/run_tests: $(LIB_SRCS) $(TEST_SRCS) $(wildcard lib/include/*.h tests/*.
 	$(CC) $(CPPFLAGS) $(CFLAGS) $(LIB_SRCS) $(TEST_SRCS) -o $@
 
 test: $(BUILD)/run_tests
-	./$(BUILD)/run_testsExpand
+	./$(BUILD)/run_tests
 
 test-sanitize:
 	$(MAKE) BUILD=$(BUILD)/sanitize CFLAGS="-O1 -g -fsanitize=address,undefined -fno-sanitize-recover=all" test
