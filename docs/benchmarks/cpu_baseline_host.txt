@@ -1,0 +1,30 @@
+bench_cpu ACCEL_DIM=4 overhead_cycles=0 overhead_instret=0
+BENCH gemm 8x8x8 plain cycles=0 instret=0 macs=512 hash=fcb57d89
+BENCH gemm 8x8x8 tiled cycles=0 instret=0 macs=512 hash=fcb57d89
+BENCH gemm 16x16x16 plain cycles=0 instret=0 macs=4096 hash=34150bb6
+BENCH gemm 16x16x16 tiled cycles=0 instret=0 macs=4096 hash=34150bb6
+BENCH gemm 32x32x32 plain cycles=0 instret=0 macs=32768 hash=c4eccd8e
+BENCH gemm 32x32x32 tiled cycles=0 instret=0 macs=32768 hash=c4eccd8e
+BENCH gemm 64x64x64 plain cycles=0 instret=0 macs=262144 hash=68135057
+BENCH gemm 64x64x64 tiled cycles=0 instret=0 macs=262144 hash=68135057
+BENCH conv 16x16x3_3x3_c8 im2col cycles=0 instret=0 macs=0 hash=134b898c
+BENCH conv 16x16x3_3x3_c8 gemm cycles=0 instret=0 macs=55296 hash=a6d6831a
+BENCH conv 16x16x3_3x3_c8 total cycles=0 instret=0 macs=55296 hash=a6d6831a
+BENCH conv 16x16x3_3x3_c8 direct cycles=0 instret=0 macs=55296 hash=a6d6831a
+BENCH conv 16x16x8_3x3_c16 im2col cycles=0 instret=0 macs=0 hash=dd287ff2
+BENCH conv 16x16x8_3x3_c16 gemm cycles=0 instret=0 macs=294912 hash=2ad034b8
+BENCH conv 16x16x8_3x3_c16 total cycles=0 instret=0 macs=294912 hash=2ad034b8
+BENCH conv 16x16x8_3x3_c16 direct cycles=0 instret=0 macs=294912 hash=2ad034b8
+BENCH conv 32x32x3_3x3_c16 im2col cycles=0 instret=0 macs=0 hash=e7cb70c0
+BENCH conv 32x32x3_3x3_c16 gemm cycles=0 instret=0 macs=442368 hash=35bb3f29
+BENCH conv 32x32x3_3x3_c16 total cycles=0 instret=0 macs=442368 hash=35bb3f29
+BENCH conv 32x32x3_3x3_c16 direct cycles=0 instret=0 macs=442368 hash=35bb3f29
+BENCH conv 8x8x16_3x3_c32 im2col cycles=0 instret=0 macs=0 hash=f0fb6bbc
+BENCH conv 8x8x16_3x3_c32 gemm cycles=0 instret=0 macs=294912 hash=e479e705
+BENCH conv 8x8x16_3x3_c32 total cycles=0 instret=0 macs=294912 hash=e479e705
+BENCH conv 8x8x16_3x3_c32 direct cycles=0 instret=0 macs=294912 hash=e479e705
+BENCH conv 16x16x16_3x3_c32_s2 im2col cycles=0 instret=0 macs=0 hash=7f91eddf
+BENCH conv 16x16x16_3x3_c32_s2 gemm cycles=0 instret=0 macs=294912 hash=48c557e1
+BENCH conv 16x16x16_3x3_c32_s2 total cycles=0 instret=0 macs=294912 hash=48c557e1
+BENCH conv 16x16x16_3x3_c32_s2 direct cycles=0 instret=0 macs=294912 hash=48c557e1
+PASSED: 0 mismatches
