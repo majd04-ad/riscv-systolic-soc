@@ -12,6 +12,7 @@ bare-metal later.
 | `lib/include/conv.h`, `lib/src/conv.c` | im2col, direct convolution, and convolution as im2col + GEMM |
 | `lib/include/requant.h`, `lib/src/requant.c` | INT32 to INT8 requantization between layers |
 | `tests/` | Self-checking tests and a minimal harness with no printf or malloc |
+| `apps/bench_cpu/` | CPU-only GEMM and im2col benchmark for Ibex (results in `docs/benchmarks/cpu_baseline.md`) |
 
 ## Running the tests
 
@@ -52,9 +53,11 @@ the rows of A to the accelerator and reads back C, so the tiling code and
 these tests carry over unchanged. `tests/test_gemm.c` checks the contract
 such a callback can rely on (tile sizes, zero padding, call count).
 
-## Running on Ibex later
+## Running on Ibex
 
 Only `tests/platform_host.c` touches stdio; it defines `test_putc`. For a
 bare-metal build, add a platform file that writes `test_putc` to the UART
 or the simulator's output device, and link it with startup code and a
-linker script in place of the host one.
+linker script in place of the host one. `apps/bench_cpu` does this for the
+Ibex Simple System (`platform_ibex.c`, with the Simple System's `crt0.S`
+and `link.ld`); see its Makefile.
